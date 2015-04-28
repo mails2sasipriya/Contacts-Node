@@ -1,0 +1,159 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+form    {
+  background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  margin:auto;
+  position:relative;
+  width:350px;
+  height:230px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: #09C;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding:10px;
+  border: 1px solid #999;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  top:-80px;
+}
+input    {
+  width:250px;
+  display:block;
+  border: 1px solid #999;
+  height: 25px;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+input[type=button] {
+  width:80px;
+  position:absolute;
+  bottom:10px;
+  background:#09C;
+  color:#fff;
+  font-family: Tahoma, Geneva, sans-serif;
+  height:30px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  border: 1px solid #999;
+}
+input.buttonAdd {
+  left:10x;
+}
+input.buttonUpdate {
+  left:100px;
+}
+input.buttonGet {
+  left:190px;
+}
+input.buttonGetAll {
+  left:280px;
+}
+input.button:hover {
+  background:#fff;
+  color:#09C;
+}
+.message {
+  margin:10px;
+  position:relative;
+  left:425px;
+  width:300px;
+  height:auto;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: #09C;
+  text-decoration: none;
+  padding:10px;
+  text-align: center;
+  top:-70px;
+}
+
+div.contacts-container {
+  background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  margin:auto;
+  position:relative;
+  width:600px;
+  height:300px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: #09C;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding:10px;
+  border: 1px solid #999;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  top:-80px;
+  display: none;
+}
+
+ul.userName {
+  float: left;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.userName > li, ul.email > li, ul.icon > li {
+  padding: 0 0.5em;
+  line-height: 2em;
+  min-height: 2em;
+  background-color: #eee;
+}
+
+ul.userName > li:nth-child(2n), ul.email > li:nth-child(2n), ul.icon > li:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+ul.userName > li.active, ul.email > li.active,  ul.icon > li.active{
+  background-color: #a6c9ff;
+}
+
+ul.email {
+  float: left;
+  list-style-type: none;
+  margin: 0;
+  width: calc(100% - 11em);
+  padding: 0;
+}
+
+ul.icon {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  width: calc(100% - 38em);
+  padding: 0;
+}
+
+img {
+  margin: 0 auto;
+  vertical-align: middle
+}

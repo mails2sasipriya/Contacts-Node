@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contacts</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="/javascripts/contactsData.js"></script>
+  <script>
+
+
+  </script>
+</head>
+<body>
+<div class="message"></div>
+<form name="contactsFrm" action="#" method="POST">
+  <div>
+    <h1>Contacts Form:</h1>
+    <label>
+      <span>Name:</span><input type="text" name="userName" placeholder="Name..." />
+    </label>
+
+    <label>
+      <span>Email Address:</span><input type="text" name="email" placeholder="Email..."/>
+    </label>
+
+    <label>
+      <input type="button" class="buttonAdd" value="Add" />
+    </label>
+
+    <label>
+      <input type="button" class="buttonUpdate" value="Update" />
+    </label>
+
+    <label>
+      <input type="button" class="buttonGet" value="Get" />
+    </label>
+
+    <label>
+      <input type="button" class="buttonGetAll" value="Get All" />
+    </label>
+  </div>
+</form>
+<br>
+<div class="contacts-container">
+  <ul class="userName"></ul>
+  <ul class="email"></ul>
+  <ul class="icon"></ul>
+</div>
+</body>
+</html>

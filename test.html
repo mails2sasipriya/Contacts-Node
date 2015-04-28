@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contacts</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+
+<form name="contacts" action="/" method="post">
+    <input type ='text' name="username" placeholder="Name"/>
+    <input type="email"  name="email" placeholder="Email"/>
+    <input type="submit" name ="button" value="Add data"/>
+    <button name="get">Get All</button>
+</form>
+<hr>
+<form name="search" action="/" method="post">
+    <input type ='text' name="username" placeholder="Name"/>
+    <input type="email"  name="email" placeholder="Email"/>
+    <input type="submit" name ="button" value="Search"/>
+</form>
+
+<div>
+    Show Data:
+
+</div>
+<script>
+    function ContactService(){
+
+    };
+
+    ContactService.prototype.create = function(object){
+        //console.log('Create fired!');
+        makeAjaxCall('/contacts', 'POST', object, done);
+
+    };
+
+    ContactService.prototype.get = function(id){
+        //get id
+
+    };
+
+    ContactService.prototype.getAll = function(){
+        makeAjaxCall('/contacts', 'GET', null, done);
+    };
+
+    ContactService.prototype.update = function(id, object){
+
+    };
+
+    ContactService.prototype.delete = function(id){
+
+    };
+
+    function done(){
+        console.log("Post sent..");
+    }
+
+    function makeAjaxCall(url, HttpVerb, Object, callback){
+        var xhr = new XMLHttpRequest();
+        xhr.open(HttpVerb, url); //get or post or any other verb
+        // if the httpVerb is post, modify the request header - content-type, xhr.send(JSON.stringify(obj))
+
+        if(HttpVerb == 'POST' && typeof Object != null){
+            //set the request header
+            xhr.setRequestHeader('content-type', 'application/json');
+        }
+        xhr.addEventListener('readystatechange',function(){
+            if(xhr.readyState === 4){
+                callback(xhr);
+            }
+        });
+        if(HttpVerb == 'POST')  xhr.send(JSON.stringify(Object));
+        if(HttpVerb == 'GET') xhr.send();
+    }
+
+    document.addEventListener('DOMContentLoaded',function(){
+
+        var forms  = document.forms.contacts;
+        forms.addEventListener('click', function(event){
+            //prevent default on event
+            event.preventDefault();
+        });
+
+        var button = forms.button;
+        button.addEventListener('click', function(){
+            //console.log('Button click');
+            var usernameIn = document.querySelector('input[name="username"]').value;
+            var emailIn = document.querySelector('input[name="email"]').value;
+            console.log(usernameIn);
+            console.log(emailIn);
+            //for create //use the same param name as the one in contact model
+            var contactObject = {name : usernameIn, email: emailIn};
+            var cs = new ContactService();
+            cs.create(contactObject);
+
+        });
+        var getButton = document.querySelector('button');
+        getButton.addEventListener('click',function(){
+            var cs = new ContactService();
+            cs.getAll();
+        });
+        //for get single id
+        var searchForm = document.forms.search;
+        searchForm.addEventListener('click', function(event){
+            //prevent default on event
+            event.preventDefault();
+        });
+        var searchButton = document.forms.search.button;
+        //console.log(searchButton);
+
+    });
+</script>
+</body>
+</html>
